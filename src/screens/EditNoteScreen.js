@@ -1,5 +1,5 @@
 import React from "react";
-import { TextInput, Button, StyleSheet } from "react-native";
+import { TextInput, StyleSheet } from "react-native";
 
 const EditNoteScreen = ({ navigation, route }) => {
   const [postText, setPostText] = React.useState("");
