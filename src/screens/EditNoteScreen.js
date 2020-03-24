@@ -20,6 +20,8 @@ const EditNoteScreen = ({ navigation, route }) => {
 
 const styles = StyleSheet.create({
   textInput: {
+    fontFamily: "dekko",
+    fontSize: 20,
     flex: 1,
     padding: 10,
     backgroundColor: "white",
