@@ -1,23 +1,37 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
+import { View, Text, Button, StyleSheet } from "react-native";
 
-function ListNotesScreen({ navigation, route }) {
-    React.useEffect(() => {
-      if (route.params?.post) {
-        // Post updated, do something with `route.params.post`
-        // For example, send the post to the server
-      }
-    }, [route.params?.post]);
-  
-    return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+const ListNotesScreen = ({ navigation, route }) => {
+  React.useEffect(() => {
+    if (route.params?.post) {
+      // get notes
+    }
+  }, [route.params?.post]);
+
+  return (
+    <View style={styles.container}>
+      <View style={styles.btnView}>
         <Button
-          title="Edit note"
-          onPress={() => navigation.navigate('EditNote')}
+          title="Add note"
+          onPress={() => navigation.navigate("EditNote")}
         />
-        <Text style={{ margin: 10 }}>Post: {route.params?.post}</Text>
       </View>
-    );
-  }
+      <Text style={{ margin: 10 }}></Text>
+    </View>
+  );
+};
 
-  export default ListNotesScreen;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center"
+  },
+  btnView: {
+    position: "absolute",
+    bottom: 10,
+    right: 10,
+    alignSelf: "flex-end"
+  }
+});
+
+export default ListNotesScreen;
