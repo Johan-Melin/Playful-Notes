@@ -10,6 +10,7 @@ const EditNoteScreen = ({ navigation, route }) => {
         multiline
         placeholder="What's on your mind?"
         style={styles.textInput}
+        autoFocus={true}
         value={postText}
         onChangeText={setPostText}
       />
@@ -21,7 +22,8 @@ const styles = StyleSheet.create({
   textInput: {
     flex: 1,
     padding: 10,
-    backgroundColor: "white"
+    backgroundColor: "white",
+    textAlignVertical: "top"
   }
 });
 
